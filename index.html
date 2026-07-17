@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>En memoria — [María Elena Jara Carrillo]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F1EAD9;
+      --paper-deep: #E6DBC2;
+      --ink: #2E2A22;
+      --ink-soft: #5A5344;
+      --moss: #6E7F5C;
+      --rosewood: #9C5B52;
+      --brass: #B8935A;
+      --gap: clamp(1.25rem, 3vw, 2.5rem);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Karla', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .placeholder {
+      background: rgba(184, 147, 90, 0.22);
+      border-bottom: 1.5px dashed var(--brass);
+      padding: 0.05em 0.35em;
+      border-radius: 3px;
+    }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .ornament {
+      display: flex;
+      justify-content: center;
+      margin: calc(var(--gap) * 1.4) 0;
+    }
+
+    .ornament svg {
+      width: 34px;
+      height: 34px;
+      opacity: 0.65;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 6rem) var(--gap) clamp(2rem, 6vw, 4rem);
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+
+    @media (max-width: 780px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 2.5rem;
+      }
+
+      .hero-frame {
+        margin: 0 auto;
+      }
+    }
+
+    .hero-frame {
+      position: relative;
+      width: min(320px, 78vw);
+      aspect-ratio: 3/4;
+      border-radius: 160px 160px 18px 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(155deg, var(--paper-deep), var(--paper) 60%);
+      border: 1px solid rgba(46, 42, 34, 0.12);
+      box-shadow: 0 18px 40px -22px rgba(46, 42, 34, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-frame .frame-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--ink-soft);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .hero-frame .frame-fallback svg {
+      width: 40px;
+      height: 40px;
+      opacity: 0.55;
+    }
+
+    .hero-frame .frame-fallback span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-text .eyebrow {
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-text h1 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.08;
+      margin: 0 0 0.6rem;
+    }
+
+    .hero-dates {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
+      color: var(--rosewood);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-epitaph {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: var(--ink-soft);
+      max-width: 34ch;
+      position: relative;
+      padding-left: 1.1rem;
+      border-left: 2px solid var(--brass);
+    }
+
+    @media (max-width: 780px) {
+      .hero-epitaph {
+        margin: 0 auto;
+        border-left: none;
+        border-top: 2px solid var(--brass);
+        padding-left: 0;
+        padding-top: 0.8rem;
+      }
+    }
+
+    .hero-bio {
+      margin-top: 1.4rem;
+      font-size: 1.05rem;
+      color: var(--ink);
+      max-width: 46ch;
+    }
+
+    @media (max-width: 780px) {
+      .hero-bio {
+        margin: 1.4rem auto 0;
+      }
+    }
+
+    /* ---------- GALLERY SECTIONS ---------- */
+    .gallery-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 4vw, 2.5rem) var(--gap) clamp(3rem, 6vw, 5rem);
+    }
+
+    .gallery-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(46, 42, 34, 0.15);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-head h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .gallery-head .count {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+    }
+
+    .photo-card {
+      break-inside: avoid;
+      margin-bottom: 0.9rem;
+      border-radius: 6px;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--paper-deep), #DED2B4 130%);
+      border: 1px solid rgba(46, 42, 34, 0.10);
+      box-shadow: 0 8px 18px -14px rgba(46, 42, 34, 0.5);
+      position: relative;
+    }
+
+    .photo-card.landscape {
+      aspect-ratio: 4/3;
+    }
+
+    .photo-card.portrait {
+      aspect-ratio: 3/4;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-card .slot-fallback {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(46, 42, 34, 0.35);
+    }
+
+    .photo-card .slot-fallback svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    /* ---------- CAROUSEL (Retratos) ---------- */
+    .carousel {
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0.25rem 0.25rem 0.5rem;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-track .photo-card {
+      flex: 0 0 auto;
+      width: clamp(200px, 32vw, 300px);
+      scroll-snap-align: center;
+      margin-bottom: 0;
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .car-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(46, 42, 34, 0.25);
+      background: transparent;
+      color: var(--ink);
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .car-btn:hover {
+      background: rgba(184, 147, 90, 0.18);
+    }
+
+    .car-btn:active {
+      transform: scale(0.94);
+    }
+
+    .car-count {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-soft);
+      min-width: 4.5em;
+      text-align: center;
+    }
+
+    .quote-card {
+      width: clamp(240px, 70vw, 420px);
+      background: linear-gradient(160deg, var(--paper-deep), #DED2B4 130%);
+      border: 1px solid rgba(46, 42, 34, 0.10);
+      border-radius: 10px;
+      box-shadow: 0 8px 18px -14px rgba(46, 42, 34, 0.5);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 200px;
+    }
+
+    .carousel-track .quote-card {
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      margin-bottom: 0;
+    }
+
+    .quote-text {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--ink);
+      margin: 0 0 1rem;
+    }
+
+    .quote-author {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rosewood);
+      margin: 0;
+    }
+
+    /* ---------- STORY ("Mi vida") ---------- */
+    .story {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: clamp(1rem, 4vw, 2rem) var(--gap) clamp(2.5rem, 6vw, 4rem);
+      text-align: center;
+    }
+
+    .story h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin: 0 0 1rem;
+    }
+
+    .story-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--brass);
+      margin: 0 auto 1.8rem;
+    }
+
+    .story p {
+      font-size: 1.08rem;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: clamp(2rem, 6vw, 4rem) var(--gap) clamp(3rem, 7vw, 5rem);
+    }
+
+    footer p {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+      max-width: 32ch;
+      margin: 0 auto;
+    }
+
+    /* reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="hero-frame">
+      <img src="fotos/retratos/hero.jpg" alt="Foto principal"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="frame-fallback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <circle cx="8.5" cy="8.5" r="1.5" />
+          <path d="M21 15l-5-5L5 21" />
+        </svg>
+        <span>Foto principal pendiente</span>
+      </div>
+    </div>
+    <div class="hero-text">
+      <p class="eyebrow">En memoria de</p>
+      <h1><span class="placeholder">María Elena Jara Carrillo</span></h1>
+      <p class="hero-dates">[<span class="placeholder">1945</span> — <span class="placeholder">2025</span>]</p>
+      <p class="hero-epitaph">"<span class="placeholder">una frase que la representaba, o algo que solía decir</span>"
+      </p>
+      <p class="hero-bio"><span class="placeholder">Escribe aquí un párrafo breve: quién fue, qué la hacía especial, un
+          recuerdo o una costumbre suya. Dos o tres frases bastan.</span></p>
+    </div>
+  </header>
+
+  <div class="ornament">
+    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1" color="#B8935A">
+      <path d="M20 6c-4 6-4 10 0 14 4-4 4-8 0-14z" />
+      <path d="M20 20v14M20 20c-6 0-9 3-11 6M20 20c6 0 9 3 11 6" />
+    </svg>
+  </div>
+
+  <section class="gallery-section reveal" id="retratos">
+    <div class="gallery-head">
+      <h2>Retratos</h2>
+      <span class="count">13 fotos</span>
+    </div>
+    <div class="carousel">
+      <div class="carousel-track" id="grid-retratos"></div>
+      <div class="carousel-controls">
+        <button class="car-btn" id="car-prev-retratos" aria-label="Retrato anterior">‹</button>
+        <span class="car-count" id="car-count-retratos">01 / 13</span>
+        <button class="car-btn" id="car-next-retratos" aria-label="Retrato siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="story reveal" id="mi-vida">
+    <h2>Mi vida</h2>
+    <div class="story-rule"></div>
+    <p><span class="placeholder">Escribe aquí la historia de su vida: de dónde era, cómo era su familia, a qué se
+        dedicó, los momentos que la marcaron y lo que la hacía quien era. Puede ser tan largo como quieras — este es el
+        espacio para contarla de verdad, más allá de la biografía breve de arriba.</span></p>
+  </section>
+
+  <section class="gallery-section reveal" id="familia">
+    <div class="gallery-head">
+      <h2>Mi familia</h2>
+      <span class="count">61 fotos</span>
+    </div>
+    <div class="carousel">
+      <div class="carousel-track" id="grid-familia"></div>
+      <div class="carousel-controls">
+        <button class="car-btn" id="car-prev-familia" aria-label="Foto anterior">‹</button>
+        <span class="car-count" id="car-count-familia">01 / 61</span>
+        <button class="car-btn" id="car-next-familia" aria-label="Foto siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="story reveal" id="cierre">
+    <div class="story-rule"></div>
+    <p><span class="placeholder">Un texto de cierre — puede ser un mensaje de despedida, algo que la familia quiera
+        decirle, o cómo la seguimos recordando.</span></p>
+  </section>
+
+  <section class="gallery-section reveal" id="frases">
+    <div class="gallery-head" style="justify-content:center; border-bottom:none;">
+      <h2>Palabras de aliento</h2>
+    </div>
+    <div class="carousel">
+      <div class="carousel-track" id="track-frases">
+        <div class="quote-card">
+          <p class="quote-text placeholder">Una frase o recuerdo corto que alguien de la familia quiera dejarle.</p>
+          <p class="quote-author placeholder">nombre — parentesco</p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text placeholder">Otra frase o recuerdo.</p>
+          <p class="quote-author placeholder">nombre — parentesco</p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text placeholder">Otra frase o recuerdo.</p>
+          <p class="quote-author placeholder">nombre — parentesco</p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text placeholder">Otra frase o recuerdo.</p>
+          <p class="quote-author placeholder">nombre — parentesco</p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text placeholder">Otra frase o recuerdo.</p>
+          <p class="quote-author placeholder">nombre — parentesco</p>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="car-btn" id="car-prev-frases" aria-label="Frase anterior">‹</button>
+        <span class="car-count" id="car-count-frases">01 / 05</span>
+        <button class="car-btn" id="car-next-frases" aria-label="Frase siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament">
+    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1" color="#B8935A">
+      <path d="M20 6c-4 6-4 10 0 14 4-4 4-8 0-14z" />
+      <path d="M20 20v14M20 20c-6 0-9 3-11 6M20 20c6 0 9 3 11 6" />
+    </svg>
+  </div>
+
+  <footer class="reveal">
+    <p>Vivirá siempre en quienes la recordamos.</p>
+  </footer>
+
+  <script>
+    // --- Genera las 13 tarjetas de "Retratos" y las 61 de "Mi familia" ---
+    // Todas apuntan a rutas locales (fotos/retratos/xx.jpg y fotos/familia/xx.jpg).
+    // Mientras esos archivos no existan, se ve el espacio reservado (marco punteado).
+    // Basta con colocar ahí las fotos reales con ese mismo nombre para que aparezcan.
+
+    function fallbackIconHTML() {
+      return '<div class="slot-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>';
+    }
+
+    function buildGrid(containerId, folder, count, orientations) {
+      const grid = document.getElementById(containerId);
+      let html = '';
+      for (let i = 1; i <= count; i++) {
+        const n = String(i).padStart(2, '0');
+        const orientation = orientations[(i - 1) % orientations.length];
+        html += `<div class="photo-card ${orientation}">
+        <img src="fotos/${folder}/${n}.jpg" alt="" loading="lazy">
+      </div>`;
+      }
+      grid.innerHTML = html;
+      // Si la foto real todavía no existe, se reemplaza por el marco punteado.
+      // Se maneja acá (con addEventListener, fase de captura) en vez de un onerror
+      // inline, porque el SVG del placeholder trae comillas dobles y rompía el
+      // atributo HTML si iba embebido como string dentro de "onerror=...".
+      grid.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function () {
+          this.style.display = 'none';
+          this.insertAdjacentHTML('afterend', fallbackIconHTML());
+        }, { once: true });
+      });
+    }
+
+    // Retratos: todos formato retrato (vertical), montados como carrusel
+    buildGrid('grid-retratos', 'retratos', 13, ['portrait']);
+
+    // Mi familia: alterna paisaje/retrato para reflejar la mezcla real de fotos horizontales y verticales
+    buildGrid('grid-familia', 'familia', 61, ['landscape', 'portrait']);
+
+    // Navegación de carruseles (Retratos y Mi familia comparten la misma lógica)
+    function wireCarousel(trackId, prevId, nextId, counterId) {
+      const track = document.getElementById(trackId);
+      const prevBtn = document.getElementById(prevId);
+      const nextBtn = document.getElementById(nextId);
+      const counter = document.getElementById(counterId);
+      if (!track || !track.children.length) return;
+      const total = track.children.length;
+      function updateCounter() {
+        const card = track.children[0];
+        const cardWidth = card.getBoundingClientRect().width || 1;
+        const gap = 16;
+        const idx = Math.round(track.scrollLeft / (cardWidth + gap)) + 1;
+        const clamped = Math.min(Math.max(idx, 1), total);
+        counter.textContent = String(clamped).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+      }
+      function scrollByCards(dir) {
+        const card = track.children[0];
+        if (!card) return;
+        const cardWidth = card.getBoundingClientRect().width;
+        track.scrollBy({ left: dir * (cardWidth + 16), behavior: 'smooth' });
+      }
+      prevBtn.addEventListener('click', () => scrollByCards(-1));
+      nextBtn.addEventListener('click', () => scrollByCards(1));
+      track.addEventListener('scroll', () => { clearTimeout(track._t); track._t = setTimeout(updateCounter, 80); });
+      updateCounter();
+    }
+    wireCarousel('grid-retratos', 'car-prev-retratos', 'car-next-retratos', 'car-count-retratos');
+    wireCarousel('grid-familia', 'car-prev-familia', 'car-next-familia', 'car-count-familia');
+    wireCarousel('track-frases', 'car-prev-frases', 'car-next-frases', 'car-count-frases');
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
+
+</body>
+
+</html>
